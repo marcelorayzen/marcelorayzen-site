@@ -9,7 +9,7 @@
 ## Escopo de testes
 
 - Página inicial
-- Página do caso LGPD + IA
+- Página de cases atualizados
 - Links externos (GitHub, LinkedIn, e-mail e WhatsApp)
 - Responsividade em dispositivos móveis e computadores
 
@@ -23,12 +23,25 @@ Funcionalidade: Navegação principal
     Então o cabeçalho com nome e subtítulo é exibido
     E os cards de serviços são apresentados
 
-Funcionalidade: Acesso ao caso LGPD + IA
-  Cenário: Abrir o caso a partir da página inicial
+Funcionalidade: Acesso aos cases
+  Cenário: Abrir os cases a partir da página inicial
     Dado que estou na página inicial
-    Quando clico em "Ver caso"
+    Quando clico em "Ver cases completos"
     Então sou direcionado para "/case-lgpd-ia"
-    E vejo as seções "Desafio", "Abordagem" e "Tecnologias"
+    E vejo a seção "Cases atualizados"
+    E encontro os cases "Plataforma de Suporte Técnico" e "Rayzen"
+
+Funcionalidade: Navegação do case
+  Cenário: Retornar para a página inicial
+    Dado que estou na página do case
+    Quando clico em "Voltar para a página inicial"
+    Então sou direcionado para "/"
+
+Funcionalidade: Modelos de IA aplicada
+  Cenário: Exibir modelos de IA aplicada em testes
+    Dado que estou na página do case
+    Quando visualizo a seção "Modelos de IA aplicada em testes"
+    Então vejo três modelos com títulos e instruções
 
 Funcionalidade: Contato via WhatsApp
   Cenário: Abrir conversa com mensagem pré-preenchida

@@ -2,16 +2,13 @@
 
 export default function Header() {
   return (
-    <header className="card" style={{ padding: 22 }}>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-        <div>
-          <h1 style={{ margin: 0, fontSize: 34, letterSpacing: -0.5 }}>{site.name}</h1>
-          <p className="muted" style={{ margin: "8px 0 0 0", fontSize: 15 }}>
-            {site.headline}
-          </p>
-        </div>
+    <header className="card hero">
+      <div className="hero__content">
+        <span className="hero__eyebrow">QA • Desenvolvimento • Governança</span>
+        <h1 className="hero__title">{site.name}</h1>
+        <p className="muted hero__subtitle">{site.headline}</p>
 
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        <div className="hero__actions">
           <a className="badge" href={site.github} target="_blank" rel="noreferrer">
             GitHub
           </a>
@@ -22,7 +19,7 @@ export default function Header() {
             E-mail
           </a>
           <a
-            className="badge"
+            className="badge badge--accent"
             href={whatsappLink("Olá Marcelo! Vi seu site e gostaria de falar sobre serviços/projetos.")}
             target="_blank"
             rel="noreferrer"
@@ -31,9 +28,15 @@ export default function Header() {
           </a>
         </div>
 
-        <p className="muted" style={{ margin: 0 }}>
+        <p className="muted hero__location">
           {site.location} • Disponível para oportunidades e projetos
         </p>
+      </div>
+
+      <div className="hero__media" aria-hidden="true">
+        <div className="hero__photo-frame">
+          <img className="hero__photo" src="/imagens/perfil-novo.png" alt="" loading="lazy" />
+        </div>
       </div>
     </header>
   );

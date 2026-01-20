@@ -23,7 +23,7 @@ Portfólio profissional com foco em QA, desenvolvimento, IA aplicada e governan�
 
 - `src/lib/site.ts` — conteúdo centralizado (nome, serviços, projetos e links)
 - `src/app/page.tsx` — página inicial
-- `src/app/case-lgpd-ia/page.tsx` — página do caso LGPD + IA
+- `src/app/case-lgpd-ia/page.tsx` — página de cases atualizados
 - `src/components` — componentes de cabeçalho e rodapé
 - `QA.MD` — atuação de QA, cenários BDD, bugs e melhorias
 
