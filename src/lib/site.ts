@@ -43,7 +43,7 @@
       stack: ["TypeScript", "Web", "Gestão", "Processos"],
       github: "https://github.com/marcelorayzen/erp-rayzen-digital",
       demo: "", // opcional
-      images: []
+      images: [] as { src: string; alt: string }[]
     },
     {
       name: "Rayzen — Infra pessoal de IA (Local-first)",
@@ -51,7 +51,7 @@
       stack: ["Node.js", "TypeScript", "MCP", "IA"],
       github: "",
       demo: "", // opcional
-      images: []
+      images: [] as { src: string; alt: string }[]
     },
   ],
   caseStudies: [
