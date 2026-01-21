@@ -43,6 +43,7 @@
       stack: ["TypeScript", "Web", "Gestão", "Processos"],
       github: "https://github.com/marcelorayzen/erp-rayzen-digital",
       demo: "", // opcional
+      images: []
     },
     {
       name: "Rayzen — Infra pessoal de IA (Local-first)",
@@ -50,6 +51,7 @@
       stack: ["Node.js", "TypeScript", "MCP", "IA"],
       github: "",
       demo: "", // opcional
+      images: []
     },
   ],
   caseStudies: [
@@ -310,6 +312,7 @@ export function whatsappLink(message: string) {
   const text = encodeURIComponent(message);
   return `https://wa.me/${site.whatsapp}?text=${text}`;
 }
+
 
 
 
