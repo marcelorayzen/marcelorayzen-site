@@ -1,4 +1,5 @@
-﻿import { site, whatsappLink } from "@/lib/site";
+﻿import Image from "next/image";
+import { site, whatsappLink } from "@/lib/site";
 
 export default function Header() {
   return (
@@ -33,9 +34,17 @@ export default function Header() {
         </p>
       </div>
 
-      <div className="hero__media" aria-hidden="true">
+      <div className="hero__media">
         <div className="hero__photo-frame">
-          <img className="hero__photo" src="/imagens/perfil-novo.png" alt="" loading="lazy" />
+          <Image
+            className="hero__photo"
+            src="/imagens/perfil-novo.png"
+            alt={`Foto de ${site.name}`}
+            width={190}
+            height={240}
+            sizes="(max-width: 640px) 160px, 190px"
+            priority
+          />
         </div>
       </div>
     </header>

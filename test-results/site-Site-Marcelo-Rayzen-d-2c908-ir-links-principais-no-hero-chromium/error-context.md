@@ -1,0 +1,117 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - text: QA • Desenvolvimento • Governança
+      - heading "Marcelo Rayzen" [level=1] [ref=e5]
+      - paragraph [ref=e6]: Automação de QA • Desenvolvedor de Software • Testes assistidos por IA • Governança & LGPD
+      - generic [ref=e7]:
+        - link "GitHub" [ref=e8] [cursor=pointer]:
+          - /url: https://github.com/marcelorayzen
+        - link "LinkedIn" [ref=e9] [cursor=pointer]:
+          - /url: https://linkedin.com/in/marcelo-augusto-572669221/
+        - link "E-mail" [ref=e10] [cursor=pointer]:
+          - /url: mailto:marcelo.rayzen@live.com
+        - link "WhatsApp • (11) 99388-2374" [ref=e11] [cursor=pointer]:
+          - /url: https://wa.me/5511993882374?text=Ol%C3%A1%20Marcelo!%20Vi%20seu%20site%20e%20gostaria%20de%20falar%20sobre%20servi%C3%A7os%2Fprojetos.
+      - paragraph [ref=e12]: Itapevi/SP • Disponível para oportunidades e projetos
+    - generic [ref=e15]:
+      - heading "Sobre mim" [level=2] [ref=e16]
+      - paragraph [ref=e17]: Sou QA Automation Engineer e Software Developer com experiência em automação de testes, desenvolvimento Web e API, qualidade de software, governança de dados e conformidade com LGPD.
+      - paragraph [ref=e18]: Atuo aplicando IA e prompt engineering para acelerar testes, análise de falhas, validação de APIs e criação de cenários BDD, sempre com foco em previsibilidade, rastreabilidade e segurança da informação. Trabalho com Selenium, Cucumber, RestAssured, Postman, Java, TypeScript, Next.js e arquiteturas orientadas a processos.
+      - paragraph [ref=e19]: Tenho forte preocupação com ética no desenvolvimento, governança e qualidade desde o design, além de experiência prática na construção de produtos reais com visão de negócio.
+      - paragraph [ref=e20]: Paralelamente à tecnologia, atuo como empreendedor na área de marcenaria e montagem de móveis, aplicando princípios de organização, qualidade, responsabilidade e entrega, o que fortalece minha visão prática e foco em resultado.
+    - generic [ref=e23]:
+      - heading "O que eu entrego" [level=2] [ref=e24]
+      - paragraph [ref=e25]: Qualidade, desenvolvimento e governança com foco em resultado, rastreabilidade e segurança.
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - heading "Automação de QA" [level=3] [ref=e28]
+        - paragraph [ref=e29]: Automação Web e API, BDD, regressão e estratégia de testes com foco em confiabilidade.
+      - generic [ref=e30]:
+        - heading "IA aplicada" [level=3] [ref=e31]
+        - paragraph [ref=e32]: IA aplicada em QA e desenvolvimento, automações com n8n, geração de cenários e integrações via APIs.
+      - generic [ref=e33]:
+        - heading "Governança & LGPD" [level=3] [ref=e34]
+        - paragraph [ref=e35]: Boas práticas para dados sensíveis, evidências e conformidade em ambientes corporativos.
+    - generic [ref=e38]:
+      - heading "Projetos em destaque" [level=2] [ref=e39]
+      - paragraph [ref=e40]: Repositórios selecionados para recrutadores e clientes.
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - heading "ERP Rayzen Digital" [level=3] [ref=e43]
+        - paragraph [ref=e44]: ERP/gestão com visão de produto, processos e evolução contínua.
+        - generic [ref=e45]:
+          - generic [ref=e46]: TypeScript
+          - generic [ref=e47]: Web
+          - generic [ref=e48]: Gestão
+          - generic [ref=e49]: Processos
+        - generic [ref=e50]:
+          - link "GitHub" [ref=e51] [cursor=pointer]:
+            - /url: https://github.com/marcelorayzen/erp-rayzen-digital
+          - generic [ref=e52]: Demonstração (em breve)
+      - generic [ref=e53]:
+        - heading "Rayzen — Infra pessoal de IA (Local-first)" [level=3] [ref=e54]
+        - paragraph [ref=e55]: Infra local-first para orquestração de agentes com foco em governança e previsibilidade.
+        - generic [ref=e56]:
+          - generic [ref=e57]: Node.js
+          - generic [ref=e58]: TypeScript
+          - generic [ref=e59]: MCP
+          - generic [ref=e60]: IA
+        - generic [ref=e61]:
+          - generic [ref=e62]: Repositório privado
+          - generic [ref=e63]: Demonstração (em breve)
+    - generic [ref=e66]:
+      - heading "Cases em destaque" [level=2] [ref=e67]
+      - paragraph [ref=e68]: Plataforma de Suporte Técnico e Rayzen — infra pessoal de IA (local-first).
+    - generic [ref=e69]:
+      - generic [ref=e70]:
+        - heading "Plataforma de Suporte Técnico (Service Desk)" [level=3] [ref=e71]
+        - paragraph [ref=e72]: Produto B2B real, com engenharia, QA e governança desde o início.
+        - paragraph [ref=e73]: Plataforma completa para abertura, roteamento e execução de chamados técnicos (presencial e remoto), com pagamentos, SLA, dashboards, anexos e governança de qualidade integrada desde o início.
+      - generic [ref=e74]:
+        - heading "Rayzen — Infra pessoal de IA (MCP + UFC + Agents)" [level=3] [ref=e75]
+        - paragraph [ref=e76]: Infra de IA séria, segura, auditável e sem hype.
+        - paragraph [ref=e77]: Infra local-first de orquestração de agentes de IA, focada em controle de contexto, segurança, observabilidade e baixo acoplamento. Projetada para evitar dependência excessiva de SaaS e garantir previsibilidade em automações com IA.
+    - link "Ver cases completos" [ref=e79] [cursor=pointer]:
+      - /url: /case-lgpd-ia
+    - generic [ref=e82]:
+      - heading "Serviços" [level=2] [ref=e83]
+      - paragraph [ref=e84]: Atuação em TI (B2B/remoto) com foco em QA, desenvolvimento e governança.
+    - generic [ref=e85]:
+      - heading "Serviços em TI" [level=3] [ref=e86]
+      - generic [ref=e87]:
+        - strong [ref=e88]: Automação de QA (Web e API)
+        - list [ref=e89]:
+          - listitem [ref=e90]: Automação de testes Web (Selenium)
+          - listitem [ref=e91]: Testes de API (RestAssured / Postman)
+          - listitem [ref=e92]: BDD com Cucumber e suíte E2E
+          - listitem [ref=e93]: Estratégia de testes e regressão
+      - generic [ref=e94]:
+        - strong [ref=e95]: IA aplicada em QA/Desenvolvimento
+        - list [ref=e96]:
+          - listitem [ref=e97]: Testes assistidos por IA (instruções para cenários, defeitos e registros)
+          - listitem [ref=e98]: Validação de contratos e corpos de requisição e resposta de API
+          - listitem [ref=e99]: Geração de massa de dados fictícia com governança
+          - listitem [ref=e100]: Fluxos de trabalho com n8n e integrações via APIs
+      - generic [ref=e101]:
+        - strong [ref=e102]: Governança & LGPD
+        - list [ref=e103]:
+          - listitem [ref=e104]: Boas práticas para dados sensíveis em testes
+          - listitem [ref=e105]: Mascaramento/anonimização e minimização
+          - listitem [ref=e106]: Documentação de evidências e rastreabilidade
+          - listitem [ref=e107]: Apoio a times em privacidade e qualidade
+      - link "Solicitar proposta (TI)" [ref=e108] [cursor=pointer]:
+        - /url: https://wa.me/5511993882374?text=Ol%C3%A1%20Marcelo!%20Quero%20conversar%20sobre%20servi%C3%A7os%20de%20TI%20(QA%2FDesenvolvimento%2FIA%2FGovernan%C3%A7a).
+    - paragraph [ref=e110]: © 2026 Marcelo Rayzen. Construído para portfólio e serviços.
+  - button "Open Next.js Dev Tools" [ref=e116] [cursor=pointer]:
+    - generic [ref=e119]:
+      - text: Compiling
+      - generic [ref=e120]:
+        - generic [ref=e121]: .
+        - generic [ref=e122]: .
+        - generic [ref=e123]: .
+  - alert [ref=e124]
+```

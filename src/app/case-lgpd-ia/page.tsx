@@ -7,8 +7,8 @@ function SectionTitle({ title, subtitle }: { title: string; subtitle?: string })
     <div className="section-title">
       <span className="section-title__line" />
       <div>
-        <h2 style={{ margin: 0, fontSize: 20 }}>{title}</h2>
-        {subtitle && <p className="muted" style={{ margin: "6px 0 0 0" }}>{subtitle}</p>}
+        <h2 className="section-title__heading">{title}</h2>
+        {subtitle && <p className="muted section-title__subtitle">{subtitle}</p>}
       </div>
     </div>
   );
@@ -28,17 +28,17 @@ export default function CaseLGPDIA() {
         subtitle="Produtos B2B e infra local-first com engenharia, QA e governança."
       />
 
-      <div className="grid" style={{ gap: 22 }}>
+      <div className="grid grid-gap-lg">
         {site.caseStudies.map((caseStudy) => (
           <section className="card" key={caseStudy.title}>
-            <h2 style={{ marginTop: 0 }}>{caseStudy.title}</h2>
-            <p className="muted" style={{ marginTop: 6 }}>{caseStudy.positioning}</p>
-            <p className="muted" style={{ marginTop: 6 }}>{caseStudy.summary}</p>
+            <h2 className="card-title">{caseStudy.title}</h2>
+            <p className="muted card-subtitle">{caseStudy.positioning}</p>
+            <p className="muted card-subtitle">{caseStudy.summary}</p>
 
-            <div className="grid grid-2" style={{ marginTop: 16 }}>
+            <div className="grid grid-2 case-highlights">
               {caseStudy.highlights.map((item) => (
                 <div className={`card${item.code ? " prompt-card" : ""}`} key={item.title}>
-                  <h3 style={{ marginTop: 0 }}>{item.title}</h3>
+                  <h3 className="card-title">{item.title}</h3>
                   {item.text && <p className="muted">{item.text}</p>}
                   {item.bullets && (
                     <ul className="muted">
@@ -60,7 +60,7 @@ export default function CaseLGPDIA() {
       <div className="grid grid-2">
         {site.aiModels.map((model) => (
           <div className="card prompt-card" key={model.title}>
-            <h3 style={{ marginTop: 0 }}>{model.title}</h3>
+            <h3 className="card-title">{model.title}</h3>
             <pre className="muted">{model.prompt}</pre>
           </div>
         ))}

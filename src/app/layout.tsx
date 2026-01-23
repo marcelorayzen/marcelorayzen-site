@@ -15,10 +15,34 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://marcelorayzen-marcelorayzen-site.vercel.app").replace(/\/$/, "");
+
 export const metadata: Metadata = {
   title: `${site.name} | QA • Desenvolvimento • LGPD`,
   description: site.headline,
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: site.name,
+    description: site.headline,
+    url: siteUrl,
+    siteName: site.name,
+    type: "website",
+    locale: "pt_BR",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${site.name} - QA e Desenvolvimento`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: site.name,
+    description: site.headline,
+    images: ["/twitter-image"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

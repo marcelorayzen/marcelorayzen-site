@@ -36,6 +36,128 @@
       ],
     },
   ],
+  architectureQA: {
+    title: "Arquitetura & QA",
+    subtitle: "Qualidade por design em produtos digitais",
+    overview: {
+      title: "Visão Geral",
+      paragraphs: [
+        "Nesta seção apresento minha abordagem de QA integrado à arquitetura de sistemas, atuando desde a fase de concepção até a validação final das entregas.",
+        "O foco não é apenas testar funcionalidades, mas garantir qualidade, previsibilidade, rastreabilidade e governança, especialmente em sistemas digitais complexos, com múltiplas integrações e impacto direto no negócio ou no serviço ao cidadão.",
+      ],
+    },
+    architecture: {
+      title: "Arquitetura orientada à Qualidade (QA-driven)",
+      description: "A arquitetura dos sistemas é pensada considerando pontos críticos de validação, riscos técnicos e impacto das integrações externas.",
+      layers: [
+        {
+          title: "Frontend",
+          text: "Responsável pela experiência do usuário e validação dos fluxos principais, estados e mensagens de erro.",
+        },
+        {
+          title: "Backend / APIs",
+          text: "Camada onde residem regras de negócio, transições de status, SLAs, validações e integrações externas.",
+        },
+        {
+          title: "Integrações Externas",
+          text: "Serviços de pagamento, notificações, armazenamento, sistemas de terceiros ou dados públicos.",
+        },
+        {
+          title: "Persistência e Auditoria",
+          text: "Armazenamento de dados, logs, rastreabilidade de ações e suporte a auditorias.",
+        },
+      ],
+      qaNote: "Do ponto de vista de QA, cada camada possui cenários de validação específicos, incluindo fluxos positivos, negativos e tratamento de falhas.",
+      diagram: `flowchart TB
+  User[Usuário / Cliente]
+  FE[Frontend]
+  BE[Backend / APIs]
+  EXT[Integrações externas]
+  DB[(Persistência & Auditoria)]
+
+  User --> FE
+  FE --> BE
+  BE --> DB
+  BE <--> EXT`,
+    },
+    acceptanceCriteria: {
+      title: "Critérios de Aceite",
+      description: "Os critérios de aceite são definidos antes do desenvolvimento, em conjunto com negócio e time técnico, com o objetivo de reduzir ambiguidades e alinhar expectativas.",
+      bullets: [
+        "Fluxo principal executa sem erros",
+        "Regras de negócio são respeitadas em todas as transições de status",
+        "Campos obrigatórios possuem validação adequada",
+        "Mensagens de erro são claras e consistentes",
+        "Integrações externas possuem tratamento de falha",
+        "Dados retornados estão completos e corretos",
+      ],
+      closing: "Essa prática garante que todos saibam o que significa \"pronto\" antes da implementação.",
+    },
+    qaPlan: {
+      title: "QA Plan — Abordagem",
+      description: "O QA Plan é utilizado como guia para organizar a estratégia de testes, definir prioridades e dar visibilidade ao processo de qualidade.",
+      sections: [
+        {
+          title: "Tipos de teste",
+          bullets: [
+            "Testes funcionais",
+            "Testes de regressão",
+            "Smoke tests para validação rápida de ambiente",
+          ],
+        },
+        {
+          title: "Escopo de testes",
+          bullets: [
+            "Fluxos críticos do negócio",
+            "Pontos sensíveis da arquitetura",
+            "Funcionalidades impactadas por integrações",
+          ],
+        },
+        {
+          title: "Ambientes e dados",
+          bullets: [
+            "Ambientes de teste e homologação",
+            "Massa de dados controlada",
+          ],
+        },
+        {
+          title: "Evidências e rastreabilidade",
+          bullets: [
+            "Registro de cenários testados",
+            "Evidências de validação",
+            "Apoio a auditorias e governança",
+          ],
+        },
+      ],
+      closing: "Essa estrutura facilita o alinhamento entre QA, desenvolvimento e negócio, além de reduzir retrabalho.",
+    },
+    integrationValidation: {
+      title: "Validação de Integrações",
+      description: "Integrações externas são tratadas como pontos críticos de risco, especialmente em sistemas corporativos e governamentais.",
+      bullets: [
+        "Contratos de API (request/response)",
+        "Cenários positivos e negativos",
+        "Tratamento de indisponibilidade ou timeout",
+        "Validação de dados enviados e recebidos",
+        "Logs e rastreabilidade de falhas",
+      ],
+    },
+    aiSupport: {
+      title: "IA aplicada ao QA (apoio ao processo)",
+      description: "A Inteligência Artificial é utilizada como apoio ao processo de qualidade, principalmente para:",
+      bullets: [
+        "Exploração de cenários de teste",
+        "Geração e refinamento de critérios de aceite",
+        "Análise de falhas e logs",
+        "Apoio à documentação técnica",
+      ],
+      closing: "O uso de IA é feito de forma consciente, como ferramenta de suporte, mantendo decisões críticas sob responsabilidade humana.",
+    },
+    conclusion: {
+      title: "Conclusão",
+      text: "Minha atuação em QA vai além da execução de testes, envolvendo arquitetura, planejamento, validação de integrações, documentação e governança.",
+    },
+  },
   projects: [
     {
       name: "ERP Rayzen Digital",

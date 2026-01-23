@@ -7,8 +7,8 @@ function SectionTitle({ title, subtitle }: { title: string; subtitle?: string })
     <div className="section-title">
       <span className="section-title__line" />
       <div>
-        <h2 style={{ margin: 0, fontSize: 20 }}>{title}</h2>
-        {subtitle && <p className="muted" style={{ margin: "6px 0 0 0" }}>{subtitle}</p>}
+        <h2 className="section-title__heading">{title}</h2>
+        {subtitle && <p className="muted section-title__subtitle">{subtitle}</p>}
       </div>
     </div>
   );
@@ -19,22 +19,22 @@ export default function Home() {
     <main className="container">
       <Header />
 
-      <section className="card" style={{ marginTop: 18 }}>
-        <h2 style={{ marginTop: 0 }}>Sobre mim</h2>
-        <p className="muted" style={{ marginTop: 8 }}>
+      <section className="card about-card">
+        <h2 className="about-title">Sobre mim</h2>
+        <p className="muted about-text">
           Sou QA Automation Engineer e Software Developer com experiência em automação de testes, desenvolvimento Web e API,
           qualidade de software, governança de dados e conformidade com LGPD.
         </p>
-        <p className="muted" style={{ marginTop: 10 }}>
+        <p className="muted about-text">
           Atuo aplicando IA e prompt engineering para acelerar testes, análise de falhas, validação de APIs e criação de
           cenários BDD, sempre com foco em previsibilidade, rastreabilidade e segurança da informação. Trabalho com
           Selenium, Cucumber, RestAssured, Postman, Java, TypeScript, Next.js e arquiteturas orientadas a processos.
         </p>
-        <p className="muted" style={{ marginTop: 10 }}>
+        <p className="muted about-text">
           Tenho forte preocupação com ética no desenvolvimento, governança e qualidade desde o design, além de
           experiência prática na construção de produtos reais com visão de negócio.
         </p>
-        <p className="muted" style={{ marginTop: 10 }}>
+        <p className="muted about-text">
           Paralelamente à tecnologia, atuo como empreendedor na área de marcenaria e montagem de móveis, aplicando
           princípios de organização, qualidade, responsabilidade e entrega, o que fortalece minha visão prática e foco
           em resultado.
@@ -48,19 +48,19 @@ export default function Home() {
 
       <div className="grid grid-3">
         <div className="card">
-          <h3 style={{ marginTop: 0 }}>Automação de QA</h3>
+          <h3 className="card-title">Automação de QA</h3>
           <p className="muted">
             Automação Web e API, BDD, regressão e estratégia de testes com foco em confiabilidade.
           </p>
         </div>
         <div className="card">
-          <h3 style={{ marginTop: 0 }}>IA aplicada</h3>
+          <h3 className="card-title">IA aplicada</h3>
           <p className="muted">
             IA aplicada em QA e desenvolvimento, automações com n8n, geração de cenários e integrações via APIs.
           </p>
         </div>
         <div className="card">
-          <h3 style={{ marginTop: 0 }}>Governança & LGPD</h3>
+          <h3 className="card-title">Governança & LGPD</h3>
           <p className="muted">
             Boas práticas para dados sensíveis, evidências e conformidade em ambientes corporativos.
           </p>
@@ -71,8 +71,8 @@ export default function Home() {
       <div className="grid grid-2">
         {site.projects.map((p) => (
           <div className="card" key={p.name}>
-            <h3 style={{ marginTop: 0 }}>{p.name}</h3>
-            <p className="muted" style={{ marginTop: 6 }}>{p.tagline}</p>
+            <h3 className="card-title">{p.name}</h3>
+            <p className="muted card-subtitle">{p.tagline}</p>
             {p.images?.length ? (
               <div className="project-gallery" aria-label={`Imagens do projeto ${p.name}`}>
                 {p.images.map((img) => (
@@ -80,21 +80,21 @@ export default function Home() {
                 ))}
               </div>
             ) : null}
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+            <div className="stack-row">
               {p.stack.map((s) => (
                 <span className="badge" key={s}>{s}</span>
               ))}
             </div>
-            <div style={{ display: "flex", gap: 12, marginTop: 12, flexWrap: "wrap" }}>
+            <div className="action-row">
               {p.github ? (
                 <a className="badge" href={p.github} target="_blank" rel="noreferrer">GitHub</a>
               ) : (
-                <span className="badge badge--ghost" aria-disabled style={{ opacity: 0.65 }}>Repositório privado</span>
+                <span className="badge badge--ghost badge--disabled" aria-disabled>Repositório privado</span>
               )}
               {p.demo ? (
                 <a className="badge" href={p.demo} target="_blank" rel="noreferrer">Demonstração</a>
               ) : (
-                <span className="badge" aria-disabled style={{ opacity: 0.65 }}>Demonstração (em breve)</span>
+                <span className="badge badge--disabled" aria-disabled>Demonstração (em breve)</span>
               )}
             </div>
           </div>
@@ -108,14 +108,31 @@ export default function Home() {
       <div className="grid grid-2">
         {site.caseStudies.map((caseStudy) => (
           <div className="card" key={caseStudy.title}>
-            <h3 style={{ marginTop: 0 }}>{caseStudy.title}</h3>
-            <p className="muted" style={{ marginTop: 6 }}>{caseStudy.positioning}</p>
-            <p className="muted" style={{ marginTop: 6 }}>{caseStudy.summary}</p>
+            <h3 className="card-title">{caseStudy.title}</h3>
+            <p className="muted card-subtitle">{caseStudy.positioning}</p>
+            <p className="muted card-subtitle">{caseStudy.summary}</p>
           </div>
         ))}
       </div>
-      <div style={{ marginTop: 12 }}>
+      <div className="section-link">
         <a className="badge" href="/case-lgpd-ia">Ver cases completos</a>
+      </div>
+
+      <SectionTitle
+        title="Arquitetura & QA"
+        subtitle="Como estruturo qualidade desde a arquitetura até integrações externas."
+      />
+      <div className="card">
+        <p className="muted">
+          Qualidade por design aplicada à arquitetura, critérios de aceite e validação de integrações críticas.
+        </p>
+        <ul className="muted">
+          <li>Arquitetura pensada com rastreabilidade e qualidade</li>
+          <li>Critérios de aceite definidos antes do desenvolvimento</li>
+          <li>QA Plan com foco em fluxos críticos e evidências</li>
+          <li>Validação de integrações externas e falhas esperadas</li>
+        </ul>
+        <a className="badge" href="/arquitetura-qa">Ver página completa</a>
       </div>
 
       <SectionTitle
@@ -123,9 +140,9 @@ export default function Home() {
         subtitle="Atuação em TI (B2B/remoto) com foco em QA, desenvolvimento e governança."
       />
       <div className="card">
-        <h3 style={{ marginTop: 0 }}>Serviços em TI</h3>
+        <h3 className="card-title">Serviços em TI</h3>
         {site.servicesTI.map((s) => (
-          <div key={s.title} style={{ marginTop: 14 }}>
+          <div key={s.title} className="service-block">
             <strong>{s.title}</strong>
             <ul className="muted">
               {s.bullets.map((b) => <li key={b}>{b}</li>)}

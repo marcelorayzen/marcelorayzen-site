@@ -2,9 +2,9 @@
 
 export default function Footer() {
   return (
-    <footer style={{ marginTop: 26, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
-      <p className="muted" style={{ margin: 0, fontSize: 13 }}>
-        © {new Date().getFullYear()} {site.name}. Construído para portfólio e serviços.
+    <footer className="footer">
+      <p className="muted footer__text">
+        © {new Date().getFullYear()} {site.name}. Construído para portfolio e serviços.
       </p>
     </footer>
   );
